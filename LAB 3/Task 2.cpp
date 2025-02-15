@@ -2,62 +2,53 @@
 #include<string>
 using namespace std;
 
-class Car{
-	string brand;
-	string model;
-	float price;
-	bool availability;
-	float discount;
-	
-	public:
-		Car(){
-			brand="Unknown";
-			model="Generic";
-			price=0.0;
-			availability=true;
-		}
-		
-		Car(string a,string b,float c,bool d){
-			brand=a;
-			model=b;
-			price=c;
-			availability=d;
-		}
-		
-		void availability(string a,string b){
-			if(availability==true){
-				cout<<"Available!";
-			}
-		}
-		
-		void request(int request){
-				if(availability==false){
-				cout<<"Unavailable!";
-			}
-		}
-		
-		void discount(int day){
-			if(day==5){
-				discount=(price/100)*5;
-			}
-			else if(day>10){
-				discount=(price/100)*10;
-			}
-		}
-		
-		void display(){
-			cout<<"Brand: "<<brand<<endl;
-			cout<<"Model: "<<model<<endl;
-			cout<<"Price: "<<price<<endl;
-			cout<<"Availibilty: "<<availibilty<<endl;
-			cout<<"Discount: "<<discount<<endl;
-		}
+class FitnessTracker{
+    private:
+        string userName;
+        int dailyStepGoal;
+        int stepsTaken;
+        double caloriesBurned;
+
+    public:
+        FitnessTracker(string name,int goal){
+            userName=name;
+            dailyStepGoal=goal;
+            stepsTaken=0;
+            caloriesBurned=0;
+        }
+
+        void steps(int step){
+            stepsTaken+=step;
+            calories();
+        }
+
+        void calories(){
+            caloriesBurned=stepsTaken*0.04;
+        }
+
+        void display(){
+            cout<<"-------------------------------\n";
+            cout<<"User Name: "<<userName;
+            cout<<"\n-------------------------------";
+            cout<<"\nSteps Taken: "<<stepsTaken<<"\nCalories Burned: "<<caloriesBurned<<"\nGoal for the day: "<<dailyStepGoal;
+            if(stepsTaken>=dailyStepGoal){
+                cout<<"\nYou achieved your step goal!"<<endl;
+            }
+            else{
+                cout<<"\nKeep Going! You need  more steps to reach your goal."<<endl;
+            }
+
+        }    
 };
 
 int main(){
-	Car c;
-	c.Car("Corrolla","BA-23",232455.00,true);
-	c.display();
-	
-	return 0;
+    FitnessTracker f("Muzammil",5000);
+    f.steps(2800);
+    f.display();
+    f.steps(1200);
+    f.display();
+    f.steps(2000);
+    f.display();
+    
+    return 0;
 }
