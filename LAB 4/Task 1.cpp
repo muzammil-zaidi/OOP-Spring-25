@@ -17,8 +17,6 @@ public:
     }
 
     Car(string b,string m,float p,bool a){
-        cout<<"\nUpdating car details...\n";
-        cout<<"------------------------"<<endl;
         brand=b;
         model=m;
         price=p;
@@ -60,7 +58,7 @@ public:
         cout<<"------------------------"<<endl;
         cout<<"Brand: "<<brand<<endl;
         cout<<"Model: "<< model<<endl;
-        cout<<"Price: $"<<price<<endl;
+        cout<<"Price: "<<price<<endl;
         cout<<"Availability: ";
         if(availability){
             cout<<"Yes"<<endl;
