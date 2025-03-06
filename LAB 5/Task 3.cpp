@@ -41,7 +41,9 @@ public:
     }
 
     void displayProjects(){
-        cout<<"Employee: "<<name<<"\nDesignation: "<<designation<<"\nProjects: ";
+        cout<<"Employee: "<<name<<endl;
+        cout<<"Designation: "<<designation<<endl;
+        cout<<"Projects: ";
         for(int i=0;i<projectCount;i++){
             cout<<projects[i]->getTitle();
             if(i<projectCount-1){
@@ -66,7 +68,9 @@ void Project::addEmployee(Employee* emp){
 }
 
 void Project::display(){
-    cout<<"Project: "<<title<<"\nDeadline: "<<deadline<<"\nEmployees: ";
+    cout<<"Project: "<<title<<endl;
+    cout<<"Deadline: "<<deadline<<endl;
+    cout<<"Employees: ";
     for(int i=0;i<employeeCount;i++){
         cout<<employees[i]->getName()<<" ("<<employees[i]->getDesignation()<<")";
         if(i<employeeCount-1){
