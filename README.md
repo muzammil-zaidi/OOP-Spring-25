@@ -21,7 +21,7 @@ This repository contains all the lab tasks for the **Object-Oriented Programming
    g++ task1.cpp -o task1
    ./task1
    ```
-
+   
 ## Contact
 For any queries or issues, feel free to reach out:
 📧 **Email:** [muzammil.s3517@gmail.com](mailto:muzammil.s3517@gmail.com)
