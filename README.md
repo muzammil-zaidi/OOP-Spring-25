@@ -3,28 +3,6 @@
 ## Overview
 This repository contains all the lab tasks for the **Object-Oriented Programming (OOP) course** during the **Spring 2025** semester. Each lab task demonstrates key OOP concepts using **C++**, including classes, inheritance, polymorphism, file handling, and more.
 
-## Folder Structure
-The repository is organized as follows:
-
-```
-OOP-Spring-25/
-│── Lab-01/
-│   ├── task1.cpp
-│   ├── task2.cpp
-│   └── README.md
-│── Lab-02/
-│   ├── task1.cpp
-│   ├── task2.cpp
-│   └── README.md
-│── ...
-│── Lab-N/
-│   ├── task1.cpp
-│   ├── task2.cpp
-│   └── README.md
-│── README.md
-```
-Each **Lab-XX** folder contains **multiple tasks**, with each task implemented in **C++**.
-
 ## Technologies Used
 - **Programming Language:** C++
 - **IDE:** Visual Studio Code / Dev-C++
