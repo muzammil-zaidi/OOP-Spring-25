@@ -30,7 +30,7 @@ int main(){
     }
 
     std::string contents;
-    readFile>>contents;
+    std::getline(readFile,contents);
     readFile.close();
 
     std::cout<<"Updated File Contents: "<<contents<<std::endl;
