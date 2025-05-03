@@ -9,8 +9,9 @@ int main(){
         return 1;
     }
 
-    initFile<<"AAAAA"<<"BBBBB"<<"CCCCC";
+    initFile<<"AAAAABBBBBCCCCC";
     initFile.close();
+
 
     std::fstream configFile("config.txt",std::ios::in | std::ios::out);
     if(!configFile){
@@ -19,7 +20,7 @@ int main(){
     }
 
     configFile.seekp(5);
-    configFile<<"ZZZZZ";
+    configFile<<"XXXXX";
     configFile.close();
 
     std::ifstream readFile("config.txt");
