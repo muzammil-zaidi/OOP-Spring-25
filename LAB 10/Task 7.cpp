@@ -14,7 +14,7 @@ int main(){
     std::streampos p1=outFile.tellp();
     std::cout<<"Position after first write: "<<p1<<std::endl;
 
-    outFile<<"Sensor 2: 25.1 C\n";
+    outFile<<"Sensor 2: 98.1 %RH\n";
     std::streampos p2=outFile.tellp();
     std::cout<<"Position after second write: "<<p2<<std::endl;
 
